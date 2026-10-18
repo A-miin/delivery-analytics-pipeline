@@ -2,11 +2,14 @@
 
 from datetime import datetime
 from pathlib import Path
+import os
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 RAW_ORDERS_PATH = PROJECT_ROOT / "data" / "raw" / "orders.csv"
 PROCESSED_ORDERS_PATH = PROJECT_ROOT / "data" / "processed" / "orders.csv"
+SCHEMA_SQL_PATH = PROJECT_ROOT / "sql" / "schema.sql"
+UPSERT_SQL_PATH = PROJECT_ROOT / "sql" / "upsert_orders.sql"
 
 # Fixed seed and fixed period: every run produces exactly the same data.
 RANDOM_SEED = 42
@@ -28,3 +31,11 @@ ORDER_COLUMNS = [
 DATETIME_COLUMNS = ["created_at", "delivered_at", "updated_at"]
 
 LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s: %(message)s"
+
+# Database connection. Standard PostgreSQL variables (PGHOST, PGUSER, PGDATABASE)
+# override these defaults, so the code works on another machine without changes.
+DB_SETTINGS = {
+    "host": os.environ.get("PGHOST", "localhost"),
+    "user": os.environ.get("PGUSER", "zulayka"),
+    "dbname": os.environ.get("PGDATABASE", "delivery_db"),
+}
