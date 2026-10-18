@@ -3,7 +3,7 @@ SELECT city, count(*)
     as total_orders,
         count(*) FILTER (WHERE status='delivered')
     as delivered_orders,
-        count(*) FILTER(WHERE status='delivered')
+        count(*) FILTER(WHERE status='cancelled')
     as cancelled_orders,
         round(100.0 * count(*) FILTER(WHERE status='cancelled')/count(*),1) as cancel_rate_pct
 FROM orders
