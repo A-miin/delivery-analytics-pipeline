@@ -37,6 +37,9 @@ createdb delivery_db
 .venv/bin/python main.py
 ```
 
+## Dashboard
+https://public.tableau.com/app/profile/zulayka.isaeva/viz/DeliveryAnalyticsDashboard/Dashboard1#1
+
 Database settings come from `PGHOST`, `PGUSER`, `PGDATABASE`
 (default: `localhost`, `zulayka`, `delivery_db`).
 
