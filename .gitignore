@@ -14,3 +14,7 @@ data/
 
 # Local instructions for Claude Code
 CLAUDE.md
+
+#IDE PYCHARM
+.idea/
+
