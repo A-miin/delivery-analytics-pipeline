@@ -8,8 +8,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 RAW_ORDERS_PATH = PROJECT_ROOT / "data" / "raw" / "orders.csv"
 PROCESSED_ORDERS_PATH = PROJECT_ROOT / "data" / "processed" / "orders.csv"
-SCHEMA_SQL_PATH = PROJECT_ROOT / "sql" / "schema.sql"
-UPSERT_SQL_PATH = PROJECT_ROOT / "sql" / "upsert_orders.sql"
+SCHEMA_SQL_PATH = PROJECT_ROOT /"sql"/"schema.sql"
+UPSERT_SQL_PATH = PROJECT_ROOT /"sql"/"upsert_orders.sql"
+
+ANALYTICS_SQL_DIR = PROJECT_ROOT/"sql"/"analytics"
+OUTPUT_DIR = PROJECT_ROOT/"output"
 
 # Fixed seed and fixed period: every run produces exactly the same data.
 RANDOM_SEED = 42
