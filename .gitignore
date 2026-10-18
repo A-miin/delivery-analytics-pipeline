@@ -1,0 +1,16 @@
+# Python virtual environment and cache
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Local settings and secrets
+.env
+
+# Generated data (can be recreated with src/generate.py and src/clean.py)
+data/
+
+# macOS
+.DS_Store
+
+# Local instructions for Claude Code
+CLAUDE.md
